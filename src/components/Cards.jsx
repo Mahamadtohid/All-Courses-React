@@ -1,3 +1,5 @@
+import Card from './Card';
+
 function Cards(courses){
 
     let allCourses=[];
@@ -17,6 +19,11 @@ function Cards(courses){
     }
     return(
         <div>
+            {
+                allCourses.map((course)=>{
+                    return<Card key ={course.id} course={course}/>
+                })
+            }
 
         </div>
     )
