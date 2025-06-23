@@ -1,8 +1,8 @@
 function Navbar(){
     return (
         <div>
-            <nav>
-                <h1 className="">Top Courses</h1>
+            <nav className="bg-slate-900 py-4 text-bold text-center">
+                <h1 className="text-white">Top Courses</h1>
             </nav>
             
 
