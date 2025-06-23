@@ -26,7 +26,7 @@ function Card({course , likedCourses , setLikedCourses}){
             
             <div className="relative">
                 <img src={course.image.url}></img>
-                <button onClick={clickHandler} className="w-[40px] bg-white rounded-full h-[40px] right-2 bottom-3 absolute grid place-items-center">
+                <button onClick={clickHandler} className="w-[40px] bg-white rounded-full h-[40px] right-2 bottom-[-12px] absolute grid place-items-center">
                     {
                         likedCourses.includes(course.id) ? <FcLike fontSize="1.75rem"/> : <FcLikePlaceholder fontSize="1.75rem"/>
                     }
@@ -37,7 +37,7 @@ function Card({course , likedCourses , setLikedCourses}){
                 <p className=" text-white font-bold text-lg leading-6">{course.title}</p>
                 <p className="mt-2">{course.description}
                     {
-                        course.description.length > 100 ? (course.description.substr(0,10)) + "..." : (course.description)
+                        course.description.length > 10 ? (course.description.substr(0,10)) + "..." : (course.description)
                     }
                 </p>
             </div>

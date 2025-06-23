@@ -1,14 +1,15 @@
 import Card from './Card';
 import { useState } from 'react';
 
-function Cards({courses}){
+function Cards({courses , category}){
 
 console.log(courses.data);
 
 const [likedCourses , setLikedCourses] = useState([])
 
 function getCoursesinArray(){
-    let allCourses = []
+    if(category === "All"){
+        let allCourses = []
 
     Object.values(courses).forEach(array => {
         array.forEach(courseData =>{
@@ -17,10 +18,15 @@ function getCoursesinArray(){
     })
 
     return allCourses;
+    }
+    else{
+        return courses[category]
+    }
+    
 
 }
     return(
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center gap-4">
 
             {
             
